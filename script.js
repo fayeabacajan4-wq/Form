@@ -68,7 +68,6 @@
 })();
 
 // Contact form validation
-// Contact form
 (function () {
   var form = document.getElementById('contact-form');
   if (!form) return;
