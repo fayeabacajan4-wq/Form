@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Project Planner - Faye Abacajan</title>
+<meta name="description" content="A vintage-inspired website project planner. Customize your dream site, then download a ready-to-send PDF brief.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<header class="navbar">
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><span class="mark">F</span>Form<span class="dot">.</span></a>
+    <ul class="nav-links">
+      <li><a class="active" href="index.html">Home</a></li>
+      <li><a href="planner.html">Planner</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a class="nav-cta nav-desktop-cta" href="planner.html">Start Planning</a>
+    <button class="burger" aria-label="Menu">☰</button>
+  </div>
+  <div class="drawer"><ul>
+    <li><a class="active" href="index.html">Home</a></li>
+    
+    <li><a href="planner.html">Planner</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a class="nav-cta" href="planner.html">Start Planning</a></li>
+  </ul></div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Plan it. Brief it. Build it.</div>
+      <h1>Design your dream website, one <em>thoughtful</em> step at a time.</h1>
+      <p class="lead">Form is an inspired project planner that turns your scattered ideas into a crisp, ready-to-send design brief.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="planner.html">Start Planning →</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <img src="image1.png" alt="Vintage desk">
+      <div class="caption">"Plan with purpose. Build with confidence." — Faye</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2>How it works</h2>
+      <p>Four simple steps from blank page to build-ready brief.</p>
+    </div>
+    <div class="grid grid-4">
+      <div class="card"><div class="num">01</div><div class="icon">🖊</div><h3>Tell us about it</h3><p>Share your project, audience, and goals in a friendly guided form.</p></div>
+      <div class="card"><div class="num">02</div><div class="icon">⌘</div><h3>Pick a style</h3><p>Choose design direction, colors, and layout from curated vintage presets.</p></div>
+      <div class="card"><div class="num">03</div><div class="icon">✦</div><h3>Add the extras</h3><p>Toggle features like galleries, blogs, and contact forms you need.</p></div>
+      <div class="card"><div class="num">04</div><div class="icon">⌸</div><h3>Get your brief</h3><p>Download a polished PDF ready to hand off to your developer.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container">
+    <div class="grid grid-4">
+      <div class="stat"><div class="num" data-count="1240" data-suffix="+">0</div><div class="label">Briefs generated</div></div>
+      <div class="stat"><div class="num" data-count="98" data-suffix="%">0</div><div class="label">Happy builders</div></div>
+      <div class="stat"><div class="num" data-count="6">0</div><div class="label">Steps to a brief</div></div>
+      <div class="stat"><div class="num" data-count="42" data-suffix="s">0</div><div class="label">Average time</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="container">
+    <blockquote>"Form turned three weeks of back-and-forth into a single afternoon. Our developer finally knew exactly what we wanted."</blockquote>
+    <cite>— Samuel Y., Virtual Assistant</cite>
+  </div>
+</section>
+
+<section class="cta-block">
+  <div class="container">
+    <h2>Ready to plan your site?</h2>
+    <p>It takes about five minutes and leaves you with a brief your team will thank you for.</p>
+    <a class="btn btn-ink" href="planner.html">Open the Planner →</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="brand"><span class="mark">F</span>Form<span class="dot">.</span></div>
+        <p>A vintage-inspired project planner for people who'd rather build than brief.</p>
+      </div>
+      <div><h3>Explore</h3><a href="index.html">Home</a><a href="planner.html">Planner</a></div>
+      <div><h3>Reach out</h3><a href="contact.html">Contact</a></div>
+      <div class="news">
+    <h3>Ready to build?</h3>
+    <p>Design yours.</p>
+
+    <button onclick="window.location.href='planner.html'">
+        Open the Planner
+    </button>
+
+    <div class="ok"></div>
+</div></div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="year"></span> Form.</span>
+      <div class="socials"><a href="https://x.com/jungkook_faye">𝕏</a><a href="https://www.facebook.com/faye.t.abacajan">𝕗</a><a href="https://www.instagram.com/fayeabacajan/">𝕀𝔾</a></div>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="assets/script.js"></script>
+</body>
+</html>
