@@ -68,31 +68,68 @@
 })();
 
 // Contact form validation
+// Contact form
 (function () {
   var form = document.getElementById('contact-form');
   if (!form) return;
+
   var setErr = function (name, msg) {
     var f = form.querySelector('[data-field="' + name + '"]');
     if (!f) return;
+
     var e = f.querySelector('.err');
-    e.textContent = msg || '';
-    f.querySelector('input,textarea').style.borderColor = msg ? '#a83232' : '';
+    if (e) e.textContent = msg || '';
+
+    var input = f.querySelector('input, textarea');
+    if (input) {
+      input.style.borderColor = msg ? '#a83232' : '';
+    }
   };
+
   var validate = function () {
     var ok = true;
+
     var name = form.name.value.trim();
     var email = form.email.value.trim();
     var msg = form.message.value.trim();
-    setErr('name', name ? '' : 'Required'); ok = ok && !!name;
-    setErr('email', /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? '' : 'Valid email required'); ok = ok && /test/.test(email) || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    setErr('message', msg.length > 10 ? '' : 'Tell us a bit more (10+ chars)'); ok = ok && msg.length > 10;
+
+    setErr('name', name ? '' : 'Required');
+    if (!name) ok = false;
+
+    var validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    setErr('email', validEmail ? '' : 'Valid email required');
+    if (!validEmail) ok = false;
+
+    setErr('message', msg.length > 10 ? '' : 'Tell us a bit more (10+ chars)');
+    if (msg.length <= 10) ok = false;
+
     return ok;
   };
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
+
+    // Stop if the form isn't valid
     if (!validate()) return;
-    var box = document.getElementById('contact-success');
-    if (box) { box.style.display = 'block'; form.style.display = 'none'; }
+
+    var name = form.name.value.trim();
+    var email = form.email.value.trim();
+    var message = form.message.value.trim();
+
+    var subject = encodeURIComponent('New Website Inquiry');
+
+    var body = encodeURIComponent(
+      'Name: ' + name + '\n' +
+      'Email: ' + email + '\n\n' +
+      'Message:\n' + message
+    );
+
+    // Open the visitor's email application
+    window.location.href =
+      'mailto:Fayeabacajan4@gmail.com?subject=' +
+      subject +
+      '&body=' +
+      body;
   });
 })();
 
